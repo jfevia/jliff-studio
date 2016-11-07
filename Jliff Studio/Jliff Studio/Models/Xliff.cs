@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
+using PropertyChanged;
 
 namespace JliffStudio.Models
 {
+    [ImplementPropertyChanged]
     [XmlRoot(ElementName = "tool", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-    public class Tool
+    public class XliffTool
     {
         [XmlAttribute(AttributeName = "tool-company")]
         public string Company { get; set; }
@@ -16,15 +18,17 @@ namespace JliffStudio.Models
         public string Version { get; set; }
     }
 
+    [ImplementPropertyChanged]
     [XmlRoot(ElementName = "header", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-    public class Header
+    public class XliffHeader
     {
         [XmlElement(ElementName = "tool", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-        public Tool Tool { get; set; }
+        public XliffTool Tool { get; set; }
     }
 
+    [ImplementPropertyChanged]
     [XmlRoot(ElementName = "target", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-    public class Target
+    public class XliffTarget
     {
         [XmlAttribute(AttributeName = "state")]
         public string State { get; set; }
@@ -34,8 +38,9 @@ namespace JliffStudio.Models
         public string Text { get; set; }
     }
 
+    [ImplementPropertyChanged]
     [XmlRoot(ElementName = "trans-unit", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-    public class TranslationUnit
+    public class XliffTranslationUnit
     {
         [XmlAttribute(AttributeName = "extype")]
         public string ExtendedType { get; set; }
@@ -44,9 +49,9 @@ namespace JliffStudio.Models
         [XmlElement(ElementName = "source", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
         public string Source { get; set; }
         [XmlElement(ElementName = "target", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-        public Target Target { get; set; }
+        public XliffTarget Target { get; set; }
         [XmlElement(ElementName = "note", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-        public Note Note { get; set; }
+        public List<XliffNote> Notes { get; set; }
 
         [XmlAttribute(AttributeName = "space", Namespace = "http://www.w3.org/XML/1998/namespace")]
         public string Space { get; set; }
@@ -55,8 +60,9 @@ namespace JliffStudio.Models
         public string Translate { get; set; }
     }
 
+    [ImplementPropertyChanged]
     [XmlRoot(ElementName = "note", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-    public class Note
+    public class XliffNote
     {
         [XmlAttribute(AttributeName = "annotates")]
         public string Annotates { get; set; }
@@ -68,31 +74,34 @@ namespace JliffStudio.Models
         public string Text { get; set; }
     }
 
+    [ImplementPropertyChanged]
     [XmlRoot(ElementName = "group", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-    public class Group
+    public class XliffGroup
     {
         [XmlAttribute(AttributeName = "datatype")]
         public string Datatype { get; set; }
         [XmlAttribute(AttributeName = "id")]
         public string Id { get; set; }
         [XmlElement(ElementName = "trans-unit", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-        public List<TranslationUnit> TranslationUnits { get; set; }
+        public List<XliffTranslationUnit> TranslationUnits { get; set; }
     }
 
+    [ImplementPropertyChanged]
     [XmlRoot(ElementName = "body", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-    public class Body
+    public class XliffBody
     {
         [XmlElement(ElementName = "group", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-        public Group Group { get; set; }
+        public XliffGroup Group { get; set; }
     }
 
+    [ImplementPropertyChanged]
     [XmlRoot(ElementName = "file", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-    public class File
+    public class XliffFile
     {
         [XmlElement(ElementName = "header", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-        public Header Header { get; set; }
+        public XliffHeader Header { get; set; }
         [XmlElement(ElementName = "body", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-        public Body Body { get; set; }
+        public XliffBody Body { get; set; }
         [XmlAttribute(AttributeName = "build-num")]
         public string BuildNumber { get; set; }
         [XmlAttribute(AttributeName = "datatype")]
@@ -112,11 +121,12 @@ namespace JliffStudio.Models
         public string ToolId { get; set; }
     }
 
+    [ImplementPropertyChanged]
     [XmlRoot(ElementName = "xliff", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
     public class Xliff
     {
         [XmlElement(ElementName = "file", Namespace = "urn:oasis:names:tc:xliff:document:1.2")]
-        public File File { get; set; }
+        public XliffFile File { get; set; }
         [XmlAttribute(AttributeName = "schemaLocation", Namespace = "http://www.w3.org/2001/XMLSchema-instance")]
         public string SchemaLocation { get; set; }
         [XmlAttribute(AttributeName = "version")]
