@@ -4,12 +4,10 @@
         xmlns:command="http://www.galasoft.ch/mvvmlight"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:interaction="http://schemas.microsoft.com/expression/2010/interactivity"
-        xmlns:local="clr-namespace:JliffStudio"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:models="clr-namespace:JliffStudio.Models"
         xmlns:properties="clr-namespace:JliffStudio.Properties"
-        Title="Jiff Studio"
+        Title="{x:Static properties:Resources.ApplicationName}"
         Width="{Binding Path=MainWindowWidth,
                         Mode=TwoWay,
                         UpdateSourceTrigger=PropertyChanged,
@@ -27,35 +25,35 @@
         mc:Ignorable="d">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_File">
-                <MenuItem Header="_New" />
-                <MenuItem Command="{Binding OpenCommand}" Header="_Open" />
+            <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemFile}">
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemNew}" />
+                <MenuItem Command="{Binding OpenCommand}" Header="{x:Static properties:Resources.MainViewMenuItemOpen}" />
                 <Separator />
-                <MenuItem Header="_Save" />
-                <MenuItem Header="Save _as..." />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemSave}" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemSaveAs}" />
                 <Separator />
-                <MenuItem Header="_Exit" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemExit}" />
             </MenuItem>
-            <MenuItem Header="_Edit">
-                <MenuItem Header="_Undo" />
-                <MenuItem Header="_Redo" />
+            <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemEdit}">
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemUndo}" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemRedo}" />
                 <Separator />
-                <MenuItem Header="Cu_t" />
-                <MenuItem Header="_Copy" />
-                <MenuItem Header="_Paste" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemCut}" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemCopy}" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemPaste}" />
                 <Separator />
-                <MenuItem Header="Select _All" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemSelectAll}" />
             </MenuItem>
-            <MenuItem Header="_Tools">
-                <MenuItem Header="_Customize" />
-                <MenuItem Header="_Options" />
+            <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemTools}">
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemCustomize}" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemOptions}" />
             </MenuItem>
-            <MenuItem Header="_Help">
-                <MenuItem Header="_Contents" />
-                <MenuItem Header="_Index" />
-                <MenuItem Header="_Search" />
+            <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemHelp}">
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemContents}" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemIndex}" />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemSearch}" />
                 <Separator />
-                <MenuItem Header="_About..." />
+                <MenuItem Header="{x:Static properties:Resources.MainViewMenuItemAbout}" />
             </MenuItem>
         </Menu>
         <StackPanel DockPanel.Dock="Right">
@@ -83,13 +81,13 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding From}"
                                         EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}"
-                                        Header="From"
+                                        Header="{x:Static properties:Resources.DataGridColumnHeaderNoteAuthor}"
                                         IsReadOnly="True" />
                     <DataGridTextColumn Binding="{Binding Annotates}"
                                         EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}"
-                                        Header="Annotates"
+                                        Header="{x:Static properties:Resources.DataGridColumnHeaderNoteAnnotate}"
                                         IsReadOnly="True" />
-                    <materialDesign:MaterialDataGridComboBoxColumn Header="Priority"
+                    <materialDesign:MaterialDataGridComboBoxColumn Header="{x:Static properties:Resources.DataGridColumnHeaderPriority}"
                                                                    ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor,
                                                                                                                                AncestorType={x:Type DataGrid}},
                                                                                                 Path=DataContext.NotePriorities}"
@@ -100,7 +98,6 @@
         <Grid DockPanel.Dock="Left">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -124,7 +121,7 @@
                         <TextBlock Grid.Column="1"
                                    Padding="5"
                                    Style="{StaticResource MaterialDesignHeadlineTextBlock}"
-                                   Text="Resources" />
+                                   Text="{x:Static properties:Resources.MainViewHeadlineResources}" />
                         <materialDesign:ColorZone Grid.Column="3"
                                                   VerticalAlignment="Center"
                                                   Panel.ZIndex="1"
@@ -144,7 +141,7 @@
                                          MinWidth="200"
                                          Margin="8 0 0 0"
                                          VerticalAlignment="Center"
-                                         materialDesign:HintAssist.Hint="Search in the file"
+                                         materialDesign:HintAssist.Hint="{x:Static properties:Resources.MainViewHintSearch}"
                                          materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                                          BorderThickness="0" />
                             </Grid>
@@ -167,27 +164,31 @@
                     <DataGrid.Columns>
                         <DataGridCheckBoxColumn Binding="{Binding Translate}"
                                                 EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}"
-                                                Header="Can be translated" />
-                        <materialDesign:MaterialDataGridComboBoxColumn Header="State"
+                                                Header="{x:Static properties:Resources.DataGridColumnHeaderCanBeTranslated}" />
+                        <materialDesign:MaterialDataGridComboBoxColumn Header="{x:Static properties:Resources.DataGridColumnHeaderState}"
                                                                        ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor,
                                                                                                                                    AncestorType={x:Type DataGrid}},
                                                                                                     Path=DataContext.TranslationUnitStates}"
                                                                        SelectedValueBinding="{Binding Target.State}" />
-                        <materialDesign:MaterialDataGridComboBoxColumn Header="Qualifiers"
+                        <materialDesign:MaterialDataGridComboBoxColumn Header="{x:Static properties:Resources.DataGridColumnHeaderStateQualifiers}"
                                                                        ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor,
                                                                                                                                    AncestorType={x:Type DataGrid}},
                                                                                                     Path=DataContext.TranslationUnitStateQualifiers}"
                                                                        SelectedValueBinding="{Binding Target.StateQualifier}" />
                         <materialDesign:MaterialDataGridTextColumn Binding="{Binding Source}"
                                                                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}"
-                                                                   Header="Source" />
+                                                                   Header="{x:Static properties:Resources.DataGridColumnHeaderSource}" />
                         <materialDesign:MaterialDataGridTextColumn Binding="{Binding Target.Text}"
                                                                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}"
-                                                                   Header="Target" />
+                                                                   Header="{x:Static properties:Resources.DataGridColumnHeaderTarget}" />
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
-            <Label Grid.Row="1" Content="{x:Static properties:Resources.MainViewLabelTextForTranslation}" />
+            <materialDesign:ColorZone Grid.Row="1"
+                                      Mode="PrimaryMid"
+                                      Padding="5">
+                <TextBlock Style="{StaticResource MaterialDesignSubheadingTextBlock}" Text="{x:Static properties:Resources.MainViewLabelTextForTranslation}" />
+            </materialDesign:ColorZone>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -196,24 +197,23 @@
                 <TextBlock Grid.Column="0"
                            Height="Auto"
                            Padding="5"
+                           Style="{StaticResource MaterialDesignCaptionTextBlock}"
                            Text="{Binding SelectedTranslationUnit.Source}"
                            TextWrapping="Wrap" />
                 <CheckBox Grid.Column="1"
                           VerticalAlignment="Center"
-                          Content="Can be translated"
+                          Content="{x:Static properties:Resources.CheckBoxContentCanBeTranslated}"
                           IsChecked="{Binding SelectedTranslationUnit.Translate}"
-                          Padding="5" />
+                          Padding="5"
+                          Style="{StaticResource MaterialDesignCheckBox}" />
             </Grid>
-            <GridSplitter Grid.Row="3"
-                          Height="5"
-                          HorizontalAlignment="Stretch" />
-            <TextBox Grid.Row="4"
+            <TextBox Grid.Row="3"
                      MinHeight="60"
                      AcceptsReturn="True"
                      Padding="5"
                      Text="{Binding SelectedTranslationUnit.Target}"
                      TextWrapping="Wrap" />
-            <Grid Grid.Row="5">
+            <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
@@ -242,24 +242,23 @@
                         <materialDesign:PackIcon VerticalAlignment="Center" Kind="ContentCopy" />
                         <TextBlock VerticalAlignment="Center"
                                    Padding="8 4 8 4"
-                                   Text="Copy" />
+                                   Text="{x:Static properties:Resources.TextBlockTextCopy}" />
                     </WrapPanel>
                 </Button>
                 <ComboBox Grid.Column="4"
                           Margin="5"
-                          Padding="8 4 8 4"
-                          SelectedIndex="2">
-                    <ComboBox.Items>
-                        <ComboBoxItem Content="New" />
-                        <ComboBoxItem Content="Pending review" />
-                        <ComboBoxItem Content="Translated" />
-                        <ComboBoxItem Content="Final" />
-                    </ComboBox.Items>
+                          ItemsSource="{Binding TranslationUnitStates}"
+                          Padding="8 4 8 4">
+                    <ComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel />
+                        </ItemsPanelTemplate>
+                    </ComboBox.ItemsPanel>
                 </ComboBox>
                 <Button Grid.Column="5"
                         MinWidth="80"
                         Margin="5"
-                        Content="Save"
+                        Content="{x:Static properties:Resources.ButtonSave}"
                         Padding="8 4 8 4" />
             </Grid>
         </Grid>

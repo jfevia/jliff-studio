@@ -117,4 +117,109 @@
   <data name="MainViewLabelTextForTranslation" xml:space="preserve">
     <value>Text for Translation</value>
   </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Jiff Studio</value>
+  </data>
+  <data name="MainViewMenuItemFile" xml:space="preserve">
+    <value>_File</value>
+  </data>
+  <data name="MainViewMenuItemNew" xml:space="preserve">
+    <value>_New</value>
+  </data>
+  <data name="MainViewMenuItemOpen" xml:space="preserve">
+    <value>_Open</value>
+  </data>
+  <data name="MainViewMenuItemSave" xml:space="preserve">
+    <value>_Save</value>
+  </data>
+  <data name="MainViewMenuItemSaveAs" xml:space="preserve">
+    <value>Save _as...</value>
+  </data>
+  <data name="MainViewMenuItemExit" xml:space="preserve">
+    <value>_Exit</value>
+  </data>
+  <data name="MainViewMenuItemEdit" xml:space="preserve">
+    <value>_Edit</value>
+  </data>
+  <data name="MainViewMenuItemUndo" xml:space="preserve">
+    <value>_Undo</value>
+  </data>
+  <data name="MainViewMenuItemRedo" xml:space="preserve">
+    <value>_Redo</value>
+  </data>
+  <data name="MainViewMenuItemCut" xml:space="preserve">
+    <value>Cu_t</value>
+  </data>
+  <data name="MainViewMenuItemCopy" xml:space="preserve">
+    <value>_Copy</value>
+  </data>
+  <data name="MainViewMenuItemPaste" xml:space="preserve">
+    <value>_Paste</value>
+  </data>
+  <data name="MainViewMenuItemSelectAll" xml:space="preserve">
+    <value>Select _All</value>
+  </data>
+  <data name="MainViewMenuItemTools" xml:space="preserve">
+    <value>_Tools</value>
+  </data>
+  <data name="MainViewMenuItemCustomize" xml:space="preserve">
+    <value>_Customize</value>
+  </data>
+  <data name="MainViewMenuItemOptions" xml:space="preserve">
+    <value>_Options</value>
+  </data>
+  <data name="MainViewMenuItemHelp" xml:space="preserve">
+    <value>_Help</value>
+  </data>
+  <data name="MainViewMenuItemContents" xml:space="preserve">
+    <value>_Contents</value>
+  </data>
+  <data name="MainViewMenuItemIndex" xml:space="preserve">
+    <value>_Index</value>
+  </data>
+  <data name="MainViewMenuItemSearch" xml:space="preserve">
+    <value>_Search</value>
+  </data>
+  <data name="MainViewMenuItemAbout" xml:space="preserve">
+    <value>_About...</value>
+  </data>
+  <data name="MainViewHeadlineResources" xml:space="preserve">
+    <value>Resources</value>
+  </data>
+  <data name="MainViewHintSearch" xml:space="preserve">
+    <value>Search in the file</value>
+  </data>
+  <data name="DataGridColumnHeaderCanBeTranslated" xml:space="preserve">
+    <value>Can be translated</value>
+  </data>
+  <data name="DataGridColumnHeaderState" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="DataGridColumnHeaderStateQualifiers" xml:space="preserve">
+    <value>Qualifiers</value>
+  </data>
+  <data name="DataGridColumnHeaderSource" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="DataGridColumnHeaderTarget" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="CheckBoxContentCanBeTranslated" xml:space="preserve">
+    <value>Can be translated</value>
+  </data>
+  <data name="TextBlockTextCopy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="DataGridColumnHeaderNoteAuthor" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="DataGridColumnHeaderNoteAnnotate" xml:space="preserve">
+    <value>Annotate</value>
+  </data>
+  <data name="DataGridColumnHeaderPriority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
 </root>

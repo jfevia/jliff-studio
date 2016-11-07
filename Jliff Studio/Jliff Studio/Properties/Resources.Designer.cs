@@ -61,11 +61,326 @@ namespace JliffStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Jiff Studio.
+        /// </summary>
+        public static string ApplicationName {
+            get {
+                return ResourceManager.GetString("ApplicationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string ButtonSave {
+            get {
+                return ResourceManager.GetString("ButtonSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can be translated.
+        /// </summary>
+        public static string CheckBoxContentCanBeTranslated {
+            get {
+                return ResourceManager.GetString("CheckBoxContentCanBeTranslated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can be translated.
+        /// </summary>
+        public static string DataGridColumnHeaderCanBeTranslated {
+            get {
+                return ResourceManager.GetString("DataGridColumnHeaderCanBeTranslated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Annotate.
+        /// </summary>
+        public static string DataGridColumnHeaderNoteAnnotate {
+            get {
+                return ResourceManager.GetString("DataGridColumnHeaderNoteAnnotate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        public static string DataGridColumnHeaderNoteAuthor {
+            get {
+                return ResourceManager.GetString("DataGridColumnHeaderNoteAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Priority.
+        /// </summary>
+        public static string DataGridColumnHeaderPriority {
+            get {
+                return ResourceManager.GetString("DataGridColumnHeaderPriority", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source.
+        /// </summary>
+        public static string DataGridColumnHeaderSource {
+            get {
+                return ResourceManager.GetString("DataGridColumnHeaderSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        public static string DataGridColumnHeaderState {
+            get {
+                return ResourceManager.GetString("DataGridColumnHeaderState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Qualifiers.
+        /// </summary>
+        public static string DataGridColumnHeaderStateQualifiers {
+            get {
+                return ResourceManager.GetString("DataGridColumnHeaderStateQualifiers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target.
+        /// </summary>
+        public static string DataGridColumnHeaderTarget {
+            get {
+                return ResourceManager.GetString("DataGridColumnHeaderTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resources.
+        /// </summary>
+        public static string MainViewHeadlineResources {
+            get {
+                return ResourceManager.GetString("MainViewHeadlineResources", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search in the file.
+        /// </summary>
+        public static string MainViewHintSearch {
+            get {
+                return ResourceManager.GetString("MainViewHintSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Text for Translation.
         /// </summary>
         public static string MainViewLabelTextForTranslation {
             get {
                 return ResourceManager.GetString("MainViewLabelTextForTranslation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _About....
+        /// </summary>
+        public static string MainViewMenuItemAbout {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Contents.
+        /// </summary>
+        public static string MainViewMenuItemContents {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemContents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Copy.
+        /// </summary>
+        public static string MainViewMenuItemCopy {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemCopy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Customize.
+        /// </summary>
+        public static string MainViewMenuItemCustomize {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemCustomize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cu_t.
+        /// </summary>
+        public static string MainViewMenuItemCut {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemCut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Edit.
+        /// </summary>
+        public static string MainViewMenuItemEdit {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Exit.
+        /// </summary>
+        public static string MainViewMenuItemExit {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _File.
+        /// </summary>
+        public static string MainViewMenuItemFile {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Help.
+        /// </summary>
+        public static string MainViewMenuItemHelp {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Index.
+        /// </summary>
+        public static string MainViewMenuItemIndex {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _New.
+        /// </summary>
+        public static string MainViewMenuItemNew {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Open.
+        /// </summary>
+        public static string MainViewMenuItemOpen {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Options.
+        /// </summary>
+        public static string MainViewMenuItemOptions {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Paste.
+        /// </summary>
+        public static string MainViewMenuItemPaste {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemPaste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Redo.
+        /// </summary>
+        public static string MainViewMenuItemRedo {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemRedo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Save.
+        /// </summary>
+        public static string MainViewMenuItemSave {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save _as....
+        /// </summary>
+        public static string MainViewMenuItemSaveAs {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemSaveAs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Search.
+        /// </summary>
+        public static string MainViewMenuItemSearch {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select _All.
+        /// </summary>
+        public static string MainViewMenuItemSelectAll {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemSelectAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Tools.
+        /// </summary>
+        public static string MainViewMenuItemTools {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Undo.
+        /// </summary>
+        public static string MainViewMenuItemUndo {
+            get {
+                return ResourceManager.GetString("MainViewMenuItemUndo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy.
+        /// </summary>
+        public static string TextBlockTextCopy {
+            get {
+                return ResourceManager.GetString("TextBlockTextCopy", resourceCulture);
             }
         }
     }
