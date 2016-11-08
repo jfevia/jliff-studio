@@ -1,5 +1,4 @@
-﻿using System.Xml.Serialization;
-using PropertyChanged;
+﻿using PropertyChanged;
 
 namespace JliffStudio.Xliff
 {
@@ -9,7 +8,6 @@ namespace JliffStudio.Xliff
         public string Annotates { get; set; }
         public string From { get; set; }
         public string Priority { get; set; }
-        [XmlText]
         public string Text { get; set; }
     }
 }
