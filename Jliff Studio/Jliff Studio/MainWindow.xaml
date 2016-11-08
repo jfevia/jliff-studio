@@ -154,7 +154,7 @@
                           AutoGenerateColumns="False"
                           CanUserAddRows="False"
                           CanUserSortColumns="True"
-                          ItemsSource="{Binding Xliff.File.Body.Group.TranslationUnits}"
+                          ItemsSource="{Binding XliffDocument.File.Body.Group.TranslationUnits}"
                           SelectedItem="{Binding SelectedTranslationUnit}">
                     <interaction:Interaction.Triggers>
                         <interaction:EventTrigger EventName="MouseDoubleClick">
